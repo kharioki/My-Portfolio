@@ -29,6 +29,15 @@ $background-opacity: 0.8;
   }
 }
 
+// Set Text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return rgb(24, 11, 70);
+  } @else {
+    @return #fff;
+  }
+}
+
 // Media Query mixins
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
